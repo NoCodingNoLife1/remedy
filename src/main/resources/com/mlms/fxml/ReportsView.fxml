@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<BorderPane xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.mlms.controller.ReportsController"
+            styleClass="main-content">
+
+    <top>
+        <FlowPane hgap="20" vgap="10" alignment="CENTER_LEFT">
+            <padding>
+                <Insets top="10" bottom="20" left="20" right="20"/>
+            </padding>
+            <Label text="Lab Reports" style="-fx-font-size: 24px; -fx-font-weight: bold;"/>
+            <Region fx:id="spacer" minWidth="20" />
+            <FlowPane hgap="10" vgap="10" alignment="CENTER_LEFT">
+                <Button fx:id="btnPrev" text="◀ Previous" onAction="#showPreviousReport" styleClass="btn-secondary"/>
+                <Label fx:id="reportCounterLabel" text="0 / 0" style="-fx-font-size: 14px; -fx-font-weight: bold;" />
+                <Button fx:id="btnNext" text="Next ▶" onAction="#showNextReport" styleClass="btn-secondary"/>
+                <Region minWidth="20" />
+                <Button text="🖨 Print Current" onAction="#printCurrentReport" styleClass="btn-primary" />
+            </FlowPane>
+        </FlowPane>
+    </top>
+
+    <center>
+        <ScrollPane fitToWidth="true" style="-fx-background-color: transparent;" styleClass="edge-to-edge">
+            <StackPane fx:id="reportContainer" alignment="TOP_CENTER">
+                <padding>
+                    <Insets top="20" bottom="20" left="20" right="20"/>
+                </padding>
+            </StackPane>
+        </ScrollPane>
+    </center>
+
+</BorderPane>

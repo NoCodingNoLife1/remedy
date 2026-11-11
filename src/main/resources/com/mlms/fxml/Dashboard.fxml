@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.geometry.Rectangle2D?>
+
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.mlms.controller.DashboardController"
+            stylesheets="@../css/style.css"
+            prefHeight="768.0" prefWidth="1024.0" styleClass="root">
+
+    <!-- Sidebar -->
+    <left>
+        <VBox styleClass="sidebar" prefWidth="250">
+            <!-- Logo Area -->
+            <VBox alignment="CENTER" spacing="10" styleClass="logo-container">
+                <padding>
+                    <Insets top="30" bottom="30"/>
+                </padding>
+                <!-- Image cropped to hide any generated text at the bottom -->
+                <ImageView fitWidth="150" fitHeight="150" preserveRatio="true">
+                    <image>
+                        <Image url="@../images/logo.jpg"/>
+                    </image>
+                    <viewport>
+                        <Rectangle2D minX="0" minY="0" width="1024" height="750"/> 
+                    </viewport>
+                </ImageView>
+                <Label text="Remedium Labs" styleClass="logo-text">
+                    <VBox.margin>
+                        <Insets top="10"/>
+                    </VBox.margin>
+                </Label>
+            </VBox>
+
+            <VBox spacing="10" VBox.vgrow="ALWAYS">
+                <Button fx:id="btnDashboard" text="📊 Analytics" onAction="#showDashboard" styleClass="sidebar-item, sidebar-item-active"/>
+                <Button fx:id="btnPatients" text="👥 Patients" onAction="#showPatients" styleClass="sidebar-item"/>
+                <Button fx:id="btnTests" text="🧪 Lab Tests" onAction="#showTests" styleClass="sidebar-item"/>
+                <Button fx:id="btnResults" text="📋 Results" onAction="#showResults" styleClass="sidebar-item"/>
+                <Button fx:id="btnReports" text="📄 Reports" onAction="#showReports" styleClass="sidebar-item"/>
+                <Button fx:id="btnSettings" text="⚙ Settings" onAction="#showSettings" styleClass="sidebar-item"/>
+            </VBox>
+        </VBox>
+    </left>
+
+    <!-- Main Content Area -->
+    <center>
+        <StackPane fx:id="contentArea">
+            <!-- Dynamic content will be loaded here -->
+        </StackPane>
+    </center>
+
+</BorderPane>

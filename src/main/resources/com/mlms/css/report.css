@@ -1,0 +1,102 @@
+.report-root {
+    -fx-background-color: #f4f5f7;
+    -fx-font-family: "Segoe UI", Arial, sans-serif;
+}
+
+.report-header-bg {
+    -fx-background-color: #ffffff;
+    -fx-padding: 30 40 30 40;
+    -fx-border-color: #e5e7eb;
+    -fx-border-width: 0 0 1 0;
+}
+
+.report-title-label {
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #0c3b5e;
+}
+
+.report-subtitle-label {
+    -fx-font-size: 14px;
+    -fx-text-fill: #5a6b7c;
+}
+
+.report-address-label {
+    -fx-font-size: 12px;
+    -fx-text-fill: #738290;
+    -fx-alignment: center-right;
+}
+
+.report-body {
+    -fx-padding: 30 40 40 40;
+    -fx-spacing: 20;
+}
+
+.report-main-heading {
+    -fx-font-size: 20px;
+    -fx-font-weight: 900;
+    -fx-text-fill: #166c9c;
+    -fx-letter-spacing: 5px; /* Note: JavaFX doesn't support letter-spacing directly in CSS for Labels, we might need to add spaces in text or use a custom skin, but we'll add spaces in text: T E S T   R E S U L T S */
+}
+
+.info-card {
+    -fx-background-color: #ffffff;
+    -fx-background-radius: 10px;
+    -fx-padding: 20;
+    -fx-spacing: 10;
+}
+
+.info-card-label {
+    -fx-font-size: 14px;
+    -fx-text-fill: #2c3e50;
+}
+
+.info-card-value {
+    -fx-font-size: 14px;
+    -fx-text-fill: #5a6b7c;
+}
+
+.results-card {
+    -fx-background-color: #ffffff;
+    -fx-background-radius: 15px;
+    -fx-padding: 0;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.05), 10, 0, 0, 5);
+}
+
+.results-header-box {
+    -fx-padding: 20 20 15 20;
+    -fx-spacing: 10;
+    -fx-border-color: #e5e7eb;
+    -fx-border-width: 0 0 1 0;
+}
+
+.results-header-label {
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #166c9c;
+}
+
+.results-category-box {
+    -fx-background-color: #f0f3f6;
+    -fx-padding: 10 20 10 20;
+}
+
+.results-category-label {
+    -fx-font-size: 14px;
+    -fx-text-fill: #5a6b7c;
+}
+
+.results-row-box {
+    -fx-padding: 10 20 10 20;
+}
+
+.results-row-test-label {
+    -fx-font-size: 13px;
+    -fx-text-fill: #1a5276;
+    -fx-padding: 0 0 0 20; /* indent */
+}
+
+.results-row-value-label {
+    -fx-font-size: 13px;
+    -fx-text-fill: #2c3e50;
+}

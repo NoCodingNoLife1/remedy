@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.geometry.Rectangle2D?>
+
+<BorderPane xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.mlms.controller.LoginController"
+            stylesheets="@../css/style.css"
+            prefHeight="768.0" prefWidth="1024.0" style="-fx-background-color: #f4f5f7;">
+
+    <center>
+        <VBox alignment="CENTER" spacing="20" maxWidth="400" maxHeight="450" 
+              style="-fx-background-color: #ffffff; -fx-background-radius: 15px; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 20, 0, 0, 10);">
+            <padding>
+                <Insets top="40" right="40" bottom="40" left="40"/>
+            </padding>
+            
+            <ImageView fitWidth="120" fitHeight="120" preserveRatio="true">
+                <image>
+                    <Image url="@../images/logo.jpg"/>
+                </image>
+                <viewport>
+                    <Rectangle2D minX="0" minY="0" width="1024" height="750"/>
+                </viewport>
+            </ImageView>
+            
+            <Label text="Remedium Labs" style="-fx-font-size: 24px; -fx-font-weight: bold; -fx-text-fill: #166c9c;"/>
+            <Label text="Please enter your password to continue" style="-fx-text-fill: #5a6b7c;"/>
+            
+            <VBox spacing="10" VBox.vgrow="ALWAYS" alignment="CENTER_LEFT">
+                <VBox.margin>
+                    <Insets top="20" bottom="20"/>
+                </VBox.margin>
+                <Label text="Password" style="-fx-font-weight: bold;"/>
+                <PasswordField fx:id="txtPassword" promptText="Enter password" styleClass="text-field" onAction="#handleLogin"/>
+                <Label fx:id="lblError" textFill="red" visible="false"/>
+            </VBox>
+            
+            <Button text="Login" onAction="#handleLogin" styleClass="btn-primary" prefWidth="400" prefHeight="40"/>
+        </VBox>
+    </center>
+
+</BorderPane>

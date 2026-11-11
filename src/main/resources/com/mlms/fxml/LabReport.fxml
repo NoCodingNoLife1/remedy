@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.geometry.Rectangle2D?>
+
+<VBox xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.mlms.controller.LabReportController"
+      styleClass="report-root" stylesheets="@../css/report.css"
+      prefWidth="700">
+
+    <!-- Header Section -->
+    <HBox styleClass="report-header-bg" alignment="CENTER_LEFT">
+        <!-- Logo placeholder -->
+        <HBox alignment="CENTER_LEFT" spacing="10" HBox.hgrow="ALWAYS">
+            <ImageView fitWidth="50" fitHeight="50" preserveRatio="true">
+                <image>
+                    <Image url="@../images/logo.jpg"/>
+                </image>
+                <viewport>
+                    <Rectangle2D minX="0" minY="0" width="1024" height="750"/>
+                </viewport>
+            </ImageView>
+            <VBox alignment="CENTER_LEFT" translateX="10">
+                <Label text="REMEDIUM" style="-fx-font-size: 22px; -fx-font-weight: 900; -fx-text-fill: #166c9c;"/>
+                <Label text="LABS" style="-fx-font-size: 22px; -fx-font-weight: 900; -fx-text-fill: #166c9c;"/>
+            </VBox>
+        </HBox>
+        
+        <VBox alignment="CENTER_RIGHT" spacing="5">
+            <Label text="101 George St," styleClass="report-address-label"/>
+            <Label text="Kabalagala-Kansanga Road" styleClass="report-address-label"/>
+        </VBox>
+    </HBox>
+
+    <!-- Body Section -->
+    <VBox styleClass="report-body" VBox.vgrow="ALWAYS" alignment="TOP_CENTER">
+        
+        <Label text="T E S T   R E S U L T S" styleClass="report-main-heading">
+            <VBox.margin>
+                <Insets top="10" bottom="20"/>
+            </VBox.margin>
+        </Label>
+        
+        <!-- Info Cards -->
+        <HBox spacing="20">
+            <!-- Left Card -->
+            <VBox styleClass="info-card" HBox.hgrow="ALWAYS" prefWidth="300">
+                <HBox>
+                    <Label text="Name: " styleClass="info-card-label"/>
+                    <Label fx:id="patientNameLabel" text="[Name]" styleClass="info-card-value"/>
+                </HBox>
+                <HBox>
+                    <Label text="Date: " styleClass="info-card-label"/>
+                    <Label fx:id="resultDateLabel" text="[Date]" styleClass="info-card-value"/>
+                </HBox>
+                <HBox>
+                    <Label text="Patient #: " styleClass="info-card-label"/>
+                    <Label fx:id="patientNumberLabel" text="[Patient #]" styleClass="info-card-value"/>
+                </HBox>
+            </VBox>
+            
+            <!-- Right Card -->
+            <VBox styleClass="info-card" HBox.hgrow="ALWAYS" prefWidth="300">
+                <HBox>
+                    <Label text="Age: " styleClass="info-card-label"/>
+                    <Label fx:id="ageLabel" text="[Age]" styleClass="info-card-value"/>
+                </HBox>
+                <HBox>
+                    <Label text="Sex: " styleClass="info-card-label"/>
+                    <Label fx:id="sexLabel" text="[Sex]" styleClass="info-card-value"/>
+                </HBox>
+                <HBox>
+                    <Label text="Test ID: " styleClass="info-card-label"/>
+                    <Label fx:id="testNumberLabel" text="[Test ID]" styleClass="info-card-value"/>
+                </HBox>
+            </VBox>
+        </HBox>
+
+        <VBox minHeight="30"/>
+
+        <!-- Results Table -->
+        <VBox styleClass="results-card" VBox.vgrow="ALWAYS" maxWidth="700">
+            <!-- Header Row -->
+            <HBox styleClass="results-header-box">
+                <Label text="Test" styleClass="results-header-label" prefWidth="350"/>
+                <Label text="Results" styleClass="results-header-label" alignment="CENTER" prefWidth="250"/>
+            </HBox>
+
+            <!-- Dynamic Rows Container -->
+            <VBox fx:id="resultsTableBody">
+                <!-- Rows will be injected here by the controller -->
+            </VBox>
+            <VBox minHeight="20"/> <!-- Bottom padding -->
+        </VBox>
+    </VBox>
+</VBox>

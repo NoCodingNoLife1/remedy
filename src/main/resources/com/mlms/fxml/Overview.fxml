@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<VBox spacing="20" alignment="CENTER_LEFT" styleClass="main-content" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="com.mlms.controller.OverviewController">
+    <padding>
+        <Insets top="30" right="30" bottom="30" left="30"/>
+    </padding>
+    <Label text="Overview" styleClass="page-title"/>
+    <HBox spacing="30">
+        <VBox styleClass="stat-card, stat-card-patients" HBox.hgrow="ALWAYS">
+            <Label text="Total Patients" styleClass="stat-label"/>
+            <Label fx:id="totalPatientsLabel" text="0" styleClass="stat-value"/>
+        </VBox>
+        <VBox styleClass="stat-card, stat-card-tests" HBox.hgrow="ALWAYS">
+            <Label text="Total Tests Available" styleClass="stat-label"/>
+            <Label fx:id="totalTestsLabel" text="0" styleClass="stat-value"/>
+        </VBox>
+        <VBox styleClass="stat-card, stat-card-completed" HBox.hgrow="ALWAYS">
+            <Label text="Completed Tests" styleClass="stat-label"/>
+            <Label fx:id="completedTestsLabel" text="0" styleClass="stat-value"/>
+        </VBox>
+    </HBox>
+</VBox>

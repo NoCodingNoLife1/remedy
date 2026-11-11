@@ -1,0 +1,353 @@
+.root {
+    -fx-font-family: 'Segoe UI', Helvetica, sans-serif;
+    -fx-background-color: #f0f2f5;
+}
+
+/* Top Bar */
+.top-bar {
+    -fx-background-color: #212121;
+    -fx-pref-height: 40px;
+    -fx-min-height: 40px;
+}
+
+.top-menu-item {
+    -fx-background-color: transparent;
+    -fx-text-fill: #b3b3b3;
+    -fx-font-size: 13px;
+    -fx-padding: 0 10;
+    -fx-cursor: hand;
+}
+
+.top-menu-item:hover {
+    -fx-text-fill: #ffffff;
+}
+
+.top-menu-active {
+    -fx-text-fill: #ffffff;
+    -fx-font-weight: bold;
+}
+
+.top-menu-icon {
+    -fx-text-fill: #b3b3b3;
+    -fx-font-size: 13px;
+    -fx-padding: 0 10;
+}
+
+.top-menu-user {
+    -fx-text-fill: #ffffff;
+    -fx-font-size: 13px;
+    -fx-padding: 0 10;
+}
+
+/* Sidebar */
+.sidebar {
+    -fx-background-color: #ffffff;
+    -fx-border-color: #e0e0e0;
+    -fx-border-width: 0 1 0 0;
+}
+
+.logo-container {
+    -fx-padding: 20;
+}
+
+/* Typography */
+.page-title {
+    -fx-font-size: 24px;
+    -fx-text-fill: #1a1a2e;
+    -fx-font-weight: bold;
+}
+
+.logo-text {
+    -fx-font-size: 20px;
+    -fx-text-fill: #143559;
+    -fx-font-family: 'Segoe UI Light', 'Segoe UI', sans-serif;
+}
+
+.sidebar-scroll {
+    -fx-background-color: transparent;
+    -fx-background: transparent;
+    -fx-border-color: transparent;
+}
+
+.sidebar-scroll .viewport {
+    -fx-background-color: transparent;
+}
+
+.sidebar-header {
+    -fx-font-size: 11px;
+    -fx-text-fill: #8f9296;
+    -fx-padding: 15 15 5 15;
+    -fx-font-weight: bold;
+}
+
+.sidebar-item {
+    -fx-font-family: 'Segoe UI Emoji', 'Segoe UI', sans-serif;
+    -fx-background-color: transparent;
+    -fx-text-fill: #444444;
+    -fx-font-size: 13px;
+    -fx-alignment: center-left;
+    -fx-padding: 8 15;
+    -fx-pref-width: 250;
+    -fx-background-radius: 0;
+    -fx-cursor: hand;
+}
+
+.sidebar-item:hover {
+    -fx-background-color: #ececec;
+}
+
+.sidebar-item-active {
+    -fx-background-color: #7c6ca6; /* Purple active color */
+    -fx-text-fill: #ffffff;
+}
+
+.sidebar-item-active:hover {
+    -fx-background-color: #6a5a94;
+}
+
+/* Main Content Area */
+.main-content {
+    -fx-background-color: #f0f2f5;
+}
+
+.content-header {
+    -fx-background-color: #ffffff;
+    -fx-padding: 15 20;
+    -fx-border-color: #e0e0e0;
+    -fx-border-width: 0 0 1 0;
+}
+
+.breadcrumb-parent {
+    -fx-font-size: 16px;
+    -fx-text-fill: #7c6ca6;
+}
+
+.breadcrumb-separator {
+    -fx-font-size: 16px;
+    -fx-text-fill: #888888;
+}
+
+.breadcrumb-current {
+    -fx-font-size: 16px;
+    -fx-text-fill: #444444;
+}
+
+.action-bar {
+    -fx-padding: 15 0 0 0;
+}
+
+.btn-primary {
+    -fx-background-color: #7c6ca6;
+    -fx-text-fill: #ffffff;
+    -fx-font-size: 13px;
+    -fx-padding: 5 15;
+    -fx-background-radius: 3;
+    -fx-cursor: hand;
+}
+
+.btn-secondary {
+    -fx-background-color: #ffffff;
+    -fx-text-fill: #444444;
+    -fx-border-color: #cccccc;
+    -fx-border-radius: 3;
+    -fx-font-size: 13px;
+    -fx-padding: 4 14;
+    -fx-cursor: hand;
+}
+
+.btn-dropdown {
+    -fx-background-color: #ffffff;
+    -fx-text-fill: #444444;
+    -fx-border-color: #cccccc;
+    -fx-border-radius: 3;
+    -fx-font-size: 13px;
+    -fx-padding: 4 10;
+    -fx-cursor: hand;
+}
+
+.pagination-text {
+    -fx-text-fill: #888888;
+    -fx-font-size: 12px;
+}
+
+.btn-icon {
+    -fx-background-color: #ffffff;
+    -fx-text-fill: #444444;
+    -fx-border-color: #cccccc;
+    -fx-border-radius: 3;
+    -fx-font-size: 12px;
+    -fx-padding: 3 8;
+    -fx-cursor: hand;
+}
+
+/* Card Container */
+.card-container {
+    -fx-padding: 20;
+}
+
+.pipeline-bar {
+    -fx-padding: 0 0 15 0;
+}
+
+.pipeline-left {
+    -fx-spacing: -1;
+}
+
+.pipeline-btn-left {
+    -fx-background-radius: 0;
+    -fx-border-color: #cccccc;
+    -fx-border-width: 1;
+    -fx-font-size: 12px;
+    -fx-padding: 6 12;
+}
+
+.pipeline-btn-purple {
+    -fx-background-color: #7c6ca6;
+    -fx-text-fill: #ffffff;
+    -fx-border-color: #6a5a94;
+}
+
+.pipeline-btn-white {
+    -fx-background-color: #ffffff;
+    -fx-text-fill: #444444;
+}
+
+.pipeline-right {
+    -fx-spacing: -1;
+}
+
+.pipeline-btn-right {
+    -fx-background-color: #f9f9fa;
+    -fx-text-fill: #888888;
+    -fx-border-color: #cccccc;
+    -fx-border-width: 1;
+    -fx-font-size: 12px;
+    -fx-padding: 6 15;
+    -fx-background-radius: 0;
+}
+
+.pipeline-btn-active {
+    -fx-background-color: #7c6ca6;
+    -fx-text-fill: #ffffff;
+    -fx-border-color: #6a5a94;
+}
+
+.card-body {
+    -fx-background-color: #ffffff;
+    -fx-border-color: #e0e0e0;
+    -fx-border-width: 1;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.05), 5, 0, 0, 2);
+    -fx-padding: 30;
+}
+
+/* Form Grid */
+.form-grid {
+    -fx-padding: 0 0 30 0;
+}
+
+.form-label {
+    -fx-font-size: 13px;
+    -fx-text-fill: #333333;
+    -fx-font-weight: bold;
+}
+
+.form-value {
+    -fx-font-size: 13px;
+    -fx-text-fill: #555555;
+}
+
+.text-blue {
+    -fx-text-fill: #7c6ca6;
+}
+
+/* Inner Tabs */
+.inner-tabs {
+    -fx-border-color: #e0e0e0;
+    -fx-border-width: 0 0 1 0;
+    -fx-padding: 0 0 10 0;
+    -fx-margin-bottom: 20;
+}
+
+.inner-tab {
+    -fx-font-size: 14px;
+    -fx-text-fill: #888888;
+    -fx-padding: 0 10 10 10;
+    -fx-cursor: hand;
+}
+
+.inner-tab-active {
+    -fx-text-fill: #444444;
+    -fx-font-weight: bold;
+}
+
+/* Data Table (Simulated) */
+.table-container {
+    -fx-padding: 15 0 0 0;
+}
+
+.table-header {
+    -fx-background-color: #f0f2f5;
+    -fx-padding: 10 15;
+    -fx-border-color: #e0e0e0;
+    -fx-border-width: 1 1 1 1;
+}
+
+.table-col-header {
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #555555;
+}
+
+.table-row {
+    -fx-background-color: #ffffff;
+    -fx-padding: 10 15;
+    -fx-border-color: #e0e0e0;
+    -fx-border-width: 0 1 1 1;
+    -fx-min-height: 40px;
+}
+
+.table-row-alt {
+    -fx-background-color: #f9f9fa;
+}
+
+.table-cell {
+    -fx-font-size: 13px;
+    -fx-text-fill: #444444;
+}
+
+/* Stat Cards */
+.stat-card {
+    -fx-background-color: #ffffff;
+    -fx-background-radius: 10;
+    -fx-padding: 25;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 10, 0, 0, 5);
+    -fx-border-radius: 10;
+    -fx-border-width: 0 0 0 5;
+}
+
+.stat-card-patients {
+    -fx-border-color: linear-gradient(to bottom right, #4CAF50, #81C784);
+}
+
+.stat-card-tests {
+    -fx-border-color: linear-gradient(to bottom right, #2196F3, #64B5F6);
+}
+
+.stat-card-completed {
+    -fx-border-color: linear-gradient(to bottom right, #9C27B0, #BA68C8);
+}
+
+.stat-label {
+    -fx-font-size: 14px;
+    -fx-text-fill: #757575;
+    -fx-font-weight: bold;
+    -fx-font-family: 'Segoe UI';
+}
+
+.stat-value {
+    -fx-font-size: 36px;
+    -fx-text-fill: #212121;
+    -fx-font-weight: 900;
+    -fx-padding: 10 0 0 0;
+    -fx-font-family: 'Segoe UI';
+}

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+
+<VBox spacing="20" styleClass="main-content" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="com.mlms.controller.PatientController">
+    <padding><Insets top="20" right="20" bottom="20" left="20"/></padding>
+    
+    <Label text="Patient Management" styleClass="page-title"/>
+    
+    <HBox spacing="10">
+        <TextField fx:id="searchField" promptText="Search Patients..." prefWidth="250"/>
+        <Region HBox.hgrow="ALWAYS"/>
+        <Button text="Add Patient" onAction="#addPatient" styleClass="btn-primary"/>
+        <Button text="Edit Selected" onAction="#editPatient" styleClass="btn-secondary"/>
+        <Button text="Delete" onAction="#deletePatient" styleClass="btn-secondary"/>
+    </HBox>
+    
+    <TableView fx:id="patientTable" VBox.vgrow="ALWAYS">
+        <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY"/>
+        </columnResizePolicy>
+        <columns>
+            <TableColumn text="Patient ID" prefWidth="100"><cellValueFactory><PropertyValueFactory property="patientNumber"/></cellValueFactory></TableColumn>
+            <TableColumn text="Name" prefWidth="200"><cellValueFactory><PropertyValueFactory property="name"/></cellValueFactory></TableColumn>
+            <TableColumn text="Age" prefWidth="60"><cellValueFactory><PropertyValueFactory property="age"/></cellValueFactory></TableColumn>
+            <TableColumn text="Gender" prefWidth="80"><cellValueFactory><PropertyValueFactory property="gender"/></cellValueFactory></TableColumn>
+            <TableColumn text="Phone" prefWidth="120"><cellValueFactory><PropertyValueFactory property="phone"/></cellValueFactory></TableColumn>
+            <TableColumn text="Address" prefWidth="150"><cellValueFactory><PropertyValueFactory property="address"/></cellValueFactory></TableColumn>
+            <TableColumn text="Registered Date" prefWidth="120"><cellValueFactory><PropertyValueFactory property="registeredDate"/></cellValueFactory></TableColumn>
+        </columns>
+    </TableView>
+</VBox>
